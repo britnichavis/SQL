@@ -1,0 +1,33 @@
+--create drug store database
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, category TEXT, price INTEGER, aisle INTEGER);
+
+INSERT into store VALUES (1, "Toothpaste", "Hygiene", 5.99, 5);
+INSERT into store VALUES (2, "Ice Cream", "Snack", 6.99, 8);
+INSERT into store VALUES (3, "Tooth Brush", "Hygiene", 2.99, 5);
+INSERT into store VALUES (4, "Chips", "Snack", 7.99, 7);
+INSERT into store VALUES (5, "Fruit Snacks", "Snack", 4.99, 7);
+INSERT into store VALUES (6, "Pizza", "Frozen", 8.99, 8);
+INSERT into store VALUES (7, "Lysol", "Cleaning", 5.99, 6);
+INSERT into store VALUES (8, "Windex", "Cleaning", 3.99, 6);
+INSERT into store VALUES (9, "Notebook", "Office", 1.99, 10);
+INSERT into store VALUES (10, "Batteries", "Misc", 11.99, 11);
+INSERT into store VALUES (11, "Soda", "Drink", 2.99, 9);
+INSERT into store VALUES (12, "Tylenol", "Medicine", 7, 2);
+INSERT into store VALUES (13, "Water", "Drink", 5.99, 9);
+INSERT into store VALUES (14, "Pens", "Office", 2.99, 10);
+INSERT into store VALUES (15, "Magazine", "Misc", 1.99, 11);
+
+--what is the sum of all of the snacks?
+SELECT SUM(price) "Sum of all snacks"
+FROM store
+WHERE category = "Snack";
+
+--display the item name and price of each item over $8
+SELECT item, price 
+FROM store 
+WHERE price > 8;
+
+--display all items and order them by the aisle number
+SELECT *
+FROM store 
+ORDER BY aisle;
