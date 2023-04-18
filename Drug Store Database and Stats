@@ -27,7 +27,7 @@ SELECT item, price
 FROM store 
 WHERE price > 8;
 
---display all items and order them by the aisle number
+--display all columns and order them by the aisle number
 SELECT *
 FROM store 
 ORDER BY aisle;
